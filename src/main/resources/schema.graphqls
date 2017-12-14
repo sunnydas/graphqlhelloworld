@@ -1,0 +1,20 @@
+type Employee{
+     id: String!
+     firstName: String
+     lastName: String
+     primaryEmailAddress: String
+     dateOfBirth: String
+}
+
+type EmployeeQuery{
+   allEmployees: [Employee]
+}
+
+type EmployeeMutation {
+  createEmployee(id: String!, description: String!, firstName: String!, lastName: String!, primaryEmailAddress: String!,dateOfBirth: String!): Employee
+}
+
+schema {
+  query: EmployeeQuery
+  mutation: EmployeeMutation
+}
